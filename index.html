@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohd Faiz — Cybersecurity Engineer</title>
+<meta name="description" content="Mohd Faiz — Aspiring Cybersecurity Engineer. SOC, network security, ethical hacking, reverse engineering & malware analysis.">
+<link rel="icon" href="NB Logo.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<div id="loading-screen">
+  <div class="loader-mark">
+    <span>INITIALIZING</span>
+    <div class="loader-bar"></div>
+  </div>
+</div>
+
+<div class="container">
+
+  <nav id="nav">
+    <div class="nav-logo">
+      <img src="NB Logo.webp" alt="Logo" class="logo-img">
+      <span class="nav-status"><span class="dot"></span>STATUS: OPEN TO WORK</span>
+    </div>
+    <div class="nav-links">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#internships" class="nav-link">Internships</a>
+      <a href="#certifications" class="nav-link">Certifications</a>
+      <a href="#achievements" class="nav-link">Achievements</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <button class="resume-btn" type="button" onclick="window.open('https://drive.google.com/drive/folders/1LoNJ9KXsWqkBoqbdCIH-E6CGNy6S5OsL?usp=sharing', '_blank')">Download Resume</button>
+    <div class="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+    <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+    <a href="#internships" onclick="closeMobileMenu()">Internships</a>
+    <a href="#certifications" onclick="closeMobileMenu()">Certifications</a>
+    <a href="#achievements" onclick="closeMobileMenu()">Achievements</a>
+    <a href="#education" onclick="closeMobileMenu()">Education</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  </div>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-pill"><span class="dot"></span>AVAILABLE FOR OPPORTUNITIES</div>
+        <h1 class="hero-greeting">Hi, I'm</h1>
+        <h1 class="hero-name"><span class="hero-name-highlight">Mohd Faiz</span></h1>
+        <p class="hero-title">Aspiring Cybersecurity Engineer<span class="caret"></span></p>
+        <p class="hero-description">Learning cybersecurity, SOC operations, and reverse engineering &amp; malware analysis — one lab, one CVE, one packet capture at a time.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="hero-contact-btn">Contact Me</a>
+          <a href="https://ariz17vintage.vercel.app" target="_blank" rel="noopener" class="hero-portfolio-btn group">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="portfolio-icon">
+              <path d="M15 3h6v6"></path><path d="M10 14 21 3"></path>
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            </svg>
+            Legacy Portfolio
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-container">
+          <div class="blob-ring"></div>
+          <div class="blob-background">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#00e6cc" d="M57.3,-44.9C73.1,-26,83.7,-2.2,77.6,15C71.5,32.2,48.7,42.9,25.8,54.1C3,65.3,-19.9,77,-38.2,71.3C-56.5,65.5,-70.2,42.3,-73.7,19.1C-77.3,-4.2,-70.6,-27.6,-56.6,-46.1C-42.6,-64.7,-21.3,-78.4,-0.2,-78.2C20.8,-78,41.6,-63.9,57.3,-44.9Z" transform="translate(100 100)" />
+            </svg>
+            <video class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-[1.4] w-[55%] h-[55%] object-cover z-[2] mix-blend-multiply contrast-150 brightness-70 saturate-0"
+                   style="clip-path: ellipse(40% 35% at 50% 40%); position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1.4); width:55%; height:55%; object-fit:cover; z-index:2; mix-blend-mode:multiply; filter:contrast(1.5) brightness(0.7) saturate(0);"
+                   autoplay muted loop playsinline>
+              <source src="Blob prf/Blob v.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="stat-chip c1"><span class="num">8.0</span><span class="lbl">CGPA</span></div>
+          <div class="stat-chip c2"><span class="num">12+</span><span class="lbl">CERTS</span></div>
+          <div class="stat-chip c3"><span class="num">04</span><span class="lbl">PROJECTS</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue"><span>SCROLL</span><span class="line"></span></div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="section">
+    <div class="eyebrow">about</div>
+    <h2>Securing systems, one layer at a time</h2>
+    <div class="about-content" data-reveal>
+      <div class="profile-frame">
+        <img src="Port Pic 1.webp" alt="Mohd Faiz">
+      </div>
+      <div class="bio">
+        <p class="bio-description">I'm a <strong>Computer Science Engineering</strong> student and aspiring cybersecurity professional passionate about securing systems, networks, and digital environments. Currently developing my skills in network security, ethical hacking, SOC operations, SIEM, Linux, and cybersecurity tools, while building a strong foundation in networking and system security.</p>
+        <p class="bio-description">I enjoy exploring security concepts through hands-on labs, practical projects, and real-world scenarios. From analyzing security events and network traffic to working with tools like Cisco Packet Tracer, Kali Linux, and SIEM platforms, I'm constantly looking for opportunities to strengthen my technical and problem-solving skills.</p>
+        <p class="bio-description">Cybersecurity motivates me to keep learning, experiment with new tools, and understand how systems can be protected against evolving threats. My goal is to build a career where I can contribute to threat detection, security monitoring, network defense, and secure system development.</p>
+        <p class="bio-description">I'm always open to learning, collaborating, and connecting with people who share an interest in cybersecurity and technology. If you're working on an interesting security project or have ideas worth exploring, I'd be glad to connect.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="section">
+    <div class="eyebrow">tech-stack</div>
+    <h2>Languages &amp; tools</h2>
+    <p class="section-sub">The stack powering my journey through code and security.</p>
+
+    <div class="bento-grid" data-reveal-stagger>
+      <div class="glass-card">
+        <h3 class="category-title">PROGRAMMING LANGUAGES</h3>
+        <div class="category-grid" id="programming-languages"></div>
+      </div>
+      <div class="glass-card">
+        <h3 class="category-title">WEB DEVELOPMENT</h3>
+        <div class="category-grid" id="web-technologies"></div>
+      </div>
+      <div class="glass-card">
+        <h3 class="category-title">DATABASES</h3>
+        <div class="category-grid" id="databases"></div>
+      </div>
+      <div class="glass-card">
+        <h3 class="category-title">DEV TOOLS</h3>
+        <div class="category-grid" id="dev-tools"></div>
+      </div>
+
+      <div class="glass-card bento-full">
+        <h3 class="category-title">CYBERSECURITY DOMAINS</h3>
+        <div class="category-grid cybersecurity-grid">
+          <div class="skill-item cyber-domain-item">
+            <div class="cyber-domain-logo">
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <circle cx="32" cy="32" r="24" fill="none" stroke="#ff4d4d" stroke-width="3"/>
+                <path d="M20 24 L32 18 L44 24 V34 C44 41 38 48 32 51 C26 48 20 41 20 34 Z" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round"/>
+                <circle cx="32" cy="30" r="5" fill="none" stroke="#ffffff" stroke-width="2.2"/>
+              </svg>
+            </div>
+            <p>Ethical Hacking</p>
+          </div>
+          <div class="skill-item cyber-domain-item">
+            <div class="cyber-domain-logo">
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <circle cx="32" cy="32" r="24" fill="none" stroke="#ff4d4d" stroke-width="3"/>
+                <path d="M20 22 H44 V42 H20 Z" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+                <path d="M24 28 H40 M24 34 H34 M24 40 H36" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M32 20 V14 M24 18 L20 14 M40 18 L44 14" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p>Network Security</p>
+          </div>
+          <div class="skill-item cyber-domain-item">
+            <div class="cyber-domain-logo">
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <circle cx="32" cy="32" r="24" fill="none" stroke="#ff4d4d" stroke-width="3"/>
+                <rect x="18" y="18" width="28" height="28" rx="4" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+                <path d="M26 26 H38 M26 32 H38 M26 38 H34" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="40" cy="40" r="3" fill="none" stroke="#ffffff" stroke-width="2.2"/>
+              </svg>
+            </div>
+            <p>SOC</p>
+          </div>
+          <div class="skill-item cyber-domain-item">
+            <div class="cyber-domain-logo">
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <circle cx="32" cy="32" r="24" fill="none" stroke="#ff4d4d" stroke-width="3"/>
+                <path d="M22 42 C22 28 26 22 32 18 C38 22 42 28 42 42" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M24 36 L28 32 L31 35 L40 26" fill="none" stroke="#ffffff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18 46 L46 46" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p>Malware Analysis</p>
+          </div>
+          <div class="skill-item cyber-domain-item">
+            <div class="cyber-domain-logo">
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <circle cx="32" cy="32" r="24" fill="none" stroke="#ff4d4d" stroke-width="3"/>
+                <path d="M18 42 L26 42 M18 42 L18 26 M26 42 L26 34 M28 22 L36 22 M36 22 L36 40 M36 40 L46 40" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M42 26 L46 22 L46 30" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p>Reverse Engineering</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="section">
+    <div class="eyebrow">projects</div>
+    <h2>Things I've built</h2>
+    <p class="section-sub">Explore some of my featured projects, where I turn ideas into practical, real-world solutions.</p>
+
+    <div class="bento-grid" data-reveal-stagger>
+      <div class="glass-card project-card">
+        <div class="project-image"><img src="Projects%20img/SHIFA image.png" alt="Shifa" onerror="this.style.display='none'"></div>
+        <h3>Shifa</h3>
+        <p class="project-desc">A smart healthcare platform that connects patients and doctors through appointments, teleconsultations, prescription management, and AI-powered healthcare assistance.</p>
+        <a href="https://github.com/Saadmadni84/Shifa" target="_blank" rel="noopener" class="ghost-btn"><i class="fab fa-github"></i><span>GitHub</span></a>
+      </div>
+
+      <div class="glass-card project-card">
+        <div class="project-image"><img src="Projects%20img/Sentinel image.png" alt="Sentinel" onerror="this.style.display='none'"></div>
+        <h3>Sentinel</h3>
+        <p class="project-desc">A cybersecurity monitoring platform designed to detect, analyze, and visualize security events in real time — a centralized dashboard for threat monitoring, log analysis, alert management, and incident investigation.</p>
+        <a href="https://github.com/faizglb/Sentinel-FraudShield" target="_blank" rel="noopener" class="ghost-btn"><i class="fab fa-github"></i><span>GitHub</span></a>
+      </div>
+
+      <div class="glass-card project-card">
+        <div class="project-image"><img src="Projects%20img/Old%20Portfolio.webp?v=4" alt="Vintage 2.0 — old portfolio project"></div>
+        <h3>Vintage 2.0</h3>
+        <p class="project-desc">A retro desktop experience with taskbar and embedded applications. Features games, a music player, and much more.</p>
+        <button class="ghost-btn" style="cursor:default;"><i class="fab fa-github"></i><span>GitHub</span></button>
+      </div>
+
+      <div class="glass-card project-card">
+        <div class="project-image"><img src="Projects%20img/Industrail brain.png" alt="Industrial brain AI"></div>
+        <h3>Industrial Brain AI</h3>
+        <p class="project-desc">Uses a Retrieval-Augmented Generation (RAG) engine to retrieve relevant information from industrial documents and provide context-aware AI responses — turning complex industrial data into actionable insights.</p>
+        <a href="https://github.com/Saadmadni84/IndustrialBrain-AI" target="_blank" rel="noopener" class="ghost-btn"><i class="fab fa-github"></i><span>GitHub</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTERNSHIPS ================= -->
+  <section id="internships" class="section">
+    <div class="eyebrow">internships</div>
+    <h2>Virtual internships</h2>
+    <p class="section-sub">Hands-on exposure through virtual internship experiences.</p>
+    <div class="cert-grid" data-reveal-stagger>
+      <div class="certification-card">
+        <h3>Cybersecurity Virtual Internship</h3>
+        <p class="certification-issuer">Cisco · AICTE</p>
+        <p class="certification-description">Successfully completed a virtual internship focused on cybersecurity, gaining practical exposure to networking and security concepts through Cisco Networking Academy.</p>
+        <button class="view-certificate-btn" onclick="viewCertificate('cisco-final-certificate')">View Certificate</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACHIEVEMENTS ================= -->
+  <section id="achievements" class="section">
+    <div class="eyebrow">achievements</div>
+    <h2>Milestones</h2>
+    <p class="section-sub">Recognitions earned along the way.</p>
+    <div class="cert-grid" data-reveal-stagger>
+      <div class="certification-card">
+        <h3>Cisco NetAcad Rider 2026</h3>
+        <p class="certification-issuer">Bronze Medal</p>
+        <p class="certification-description">Achieved Bronze Medal in Cisco NetAcad Riders 2026, demonstrating networking knowledge and practical problem-solving skills.</p>
+        <button class="view-certificate-btn" onclick="viewCertificate('cisco-netacad-rider-certificate')">View Certificate</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CERTIFICATIONS ================= -->
+  <section id="certifications" class="section">
+    <div class="eyebrow">certifications</div>
+    <h2>Credentials</h2>
+    <p class="section-sub">Professional certifications backing up the skills above.</p>
+    <div class="cert-grid" data-reveal-stagger>
+      <div class="certification-card">
+        <h3>Red Hat Linux Fundamentals</h3>
+        <p class="certification-issuer">Red Hat</p>
+        <p class="certification-description">Introduction to the Red Hat Linux operating system, command-line interface, user administration, and core Linux concepts.</p>
+        <button class="view-certificate-btn" onclick="viewCertificate('red-hat-linux-fundamentals')">View Certificate</button>
+      </div>
+      <div class="certification-card">
+        <h3>Red Hat System Administration 1</h3>
+        <p class="certification-issuer">Red Hat</p>
+        <p class="certification-description">Introduction to Red Hat Linux system administration, including user management, networking, and essential system administration tasks.</p>
+        <button class="view-certificate-btn" onclick="viewCertificate('red-hat-system-administration-1')">View Certificate</button>
+      </div>
+      <div class="certification-card">
+        <h3>Red Hat System Administration 2</h3>
+        <p class="certification-issuer">Red Hat</p>
+        <p class="certification-description">Advanced Red Hat Linux system administration, including storage management, networking, security, system services, and troubleshooting.</p>
+        <button class="view-certificate-btn" onclick="viewCertificate('red-hat-system-administration-2')">View Certificate</button>
+      </div>
+      <div class="certification-card">
+        <h3>CCNA: Introduction to Networks</h3>
+        <p class="certification-issuer">Cisco</p>
+        <p class="certification-description">Introduction to networking fundamentals, network devices, protocols, IP addressing, Ethernet, and basic network configuration concepts.</p>
+        <button class="view-certificate-btn" onclick="viewCertificate('ccna-introduction-to-networks')">View Certificate</button>
+      </div>
+      <div class="certification-card">
+        <h3>Cloud Foundations Graduate</h3>
+        <p class="certification-issuer">AWS</p>
+        <p class="certification-description">Introduction to cloud computing concepts, AWS core services, cloud architecture, security, pricing, and basic AWS infrastructure.</p>
+        <button class="view-certificate-btn" onclick="viewCertificate('aws-cloud-foundations')">View Certificate</button>
+      </div>
+      <div class="certification-card">
+        <h3>Cybersecurity Foundation</h3>
+        <p class="certification-issuer">Palo Alto Networks</p>
+        <p class="certification-description">Introduction to cybersecurity fundamentals, network security, threat prevention, security operations, and core cybersecurity concepts.</p>
+        <button class="view-certificate-btn" onclick="viewCertificate('cybersecurity-foundation')">View Certificate</button>
+      </div>
+      <div class="certification-card">
+        <h3>Network Security Fundamentals</h3>
+        <p class="certification-issuer">Palo Alto Networks</p>
+        <p class="certification-description">Introduction to network security concepts, common threats, secure networking practices, authentication and fundamental security mechanisms.</p>
+        <button class="view-certificate-btn" onclick="viewCertificate('network-security-fundamentals')">View Certificate</button>
+      </div>
+      <div class="certification-card">
+        <h3>Cloud Security Fundamentals</h3>
+        <p class="certification-issuer">Palo Alto Networks</p>
+        <p class="certification-description">Introduction to cloud security concepts, AWS security services, cloud architecture security, and compliance.</p>
+        <button class="view-certificate-btn" onclick="viewCertificate('cloud-security-fundamentals')">View Certificate</button>
+      </div>
+      <div class="certification-card">
+        <h3>Cloud Security Automation</h3>
+        <p class="certification-issuer">Palo Alto Networks</p>
+        <p class="certification-description">Introduction to cloud security automation, orchestration, and continuous monitoring.</p>
+        <button class="view-certificate-btn" onclick="viewCertificate('cloud-security-automation')">View Certificate</button>
+      </div>
+      <div class="certification-card">
+        <h3>Security Operations Fundamentals</h3>
+        <p class="certification-issuer">Palo Alto Networks</p>
+        <p class="certification-description">Introduction to security operations, incident response, and threat hunting.</p>
+        <button class="view-certificate-btn" onclick="viewCertificate('security-operations-fundamentals')">View Certificate</button>
+      </div>
+      <div class="certification-card">
+        <h3>Security Operations Configurations</h3>
+        <p class="certification-issuer">Palo Alto Networks</p>
+        <p class="certification-description">Introduction to security operations, security monitoring, incident detection, threat analysis, and configuring security controls.</p>
+        <button class="view-certificate-btn" onclick="viewCertificate('security-operations-configurations')">View Certificate</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section id="education" class="section">
+    <div class="eyebrow">education</div>
+    <h2>Academic background</h2>
+    <p class="section-sub">Educational milestones so far.</p>
+
+    <div class="edu-timeline" data-reveal-stagger>
+      <div class="edu-item">
+        <div class="edu-card">
+          <div>
+            <h3>GL Bajaj Institute of Technology &amp; Management</h3>
+            <p>Computer Science &amp; Engineering (Artificial Intelligence) · 2023–2027</p>
+          </div>
+          <div class="edu-metric">CGPA 8.0</div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-card">
+          <div>
+            <h3>National Public School</h3>
+            <p>Senior Secondary School Certification (12th)</p>
+          </div>
+          <div class="edu-metric">83%</div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-card">
+          <div>
+            <h3>National Public School</h3>
+            <p>Secondary School Certification (10th)</p>
+          </div>
+          <div class="edu-metric">80.2%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="section">
+    <div class="eyebrow">contact</div>
+    <h2>Let's talk</h2>
+    <p class="section-sub">Ready to bring ideas to life? Let's discuss what's next.</p>
+
+    <div class="contact-container" data-reveal>
+      <div>
+        <div class="contact-info-cards">
+          <div class="contact-info-card">
+            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-card-content"><h3>Email</h3><p>mdfaiz0871@gmail.com</p></div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-card-content"><h3>Location</h3><p>New Delhi, India</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <form action="mailto:mdfaiz0871@gmail.com" method="post" enctype="text/plain" class="contact-form">
+          <input type="hidden" name="_subject" value="Portfolio Contact">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" class="form-input" required>
+            <i class="fas fa-user form-icon"></i>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" class="form-input" required>
+            <i class="fas fa-envelope form-icon"></i>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject" class="form-input" required>
+            <i class="fas fa-bookmark form-icon"></i>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" class="form-input form-textarea" rows="4" required></textarea>
+            <i class="fas fa-comment-dots form-icon"></i>
+          </div>
+          <button type="submit" class="form-button"><span>Send Message</span><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="website-footer">
+    <div class="footer-content">
+      <div>
+        <div class="footer-logo"><img src="NB Logo.webp" alt="NB Logo"></div>
+        <p class="mar-tagline">Aspiring cybersecurity professional passionate about securing systems, networks, and digital environments.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">contact</h4>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-text"><p class="contact-main">mdfaiz0871@gmail.com</p><p class="contact-label">EMAIL</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="contact-text"><p class="contact-main">NEW DELHI, INDIA</p><p class="contact-label">LOCATION</p></div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">let's connect</h4>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/mohd-faiz-a66432296" target="_blank" rel="noopener" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/faizglb" target="_blank" rel="noopener" class="social-icon"><i class="fab fa-github"></i></a>
+          <a href="#" onclick="openEmail(event)" class="social-icon"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>// copyright 2026 · all rights reserved · mf</p>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
