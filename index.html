@@ -8,68 +8,82 @@
 <link rel="icon" href="NB Logo.webp">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
+<!-- CUSTOM CURSOR -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- BACKGROUND CANVAS -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- LOADING SCREEN -->
 <div id="loading-screen">
   <div class="loader-mark">
-    <span>INITIALIZING</span>
+    <div class="loader-hexagon"></div>
+    <span>INITIALIZING SYSTEM</span>
     <div class="loader-bar"></div>
+    <span class="loader-percent" id="loader-pct">0%</span>
   </div>
 </div>
 
 <div class="container">
 
+  <!-- ═══ NAV ═══ -->
   <nav id="nav">
     <div class="nav-logo">
       <img src="NB Logo.webp" alt="Logo" class="logo-img">
       <span class="nav-status"><span class="dot"></span>STATUS: OPEN TO WORK</span>
     </div>
     <div class="nav-links">
-      <a href="#about" class="nav-link">About</a>
-      <a href="#skills" class="nav-link">Skills</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#internships" class="nav-link">Internships</a>
-      <a href="#certifications" class="nav-link">Certifications</a>
-      <a href="#achievements" class="nav-link">Achievements</a>
-      <a href="#education" class="nav-link">Education</a>
-      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#about"          class="nav-link">About</a>
+      <a href="#skills"         class="nav-link">Skills</a>
+      <a href="#projects"       class="nav-link">Projects</a>
+      <a href="#internships"    class="nav-link">Internships</a>
+      <a href="#certifications" class="nav-link">Certs</a>
+      <a href="#achievements"   class="nav-link">Achievements</a>
+      <a href="#education"      class="nav-link">Education</a>
+      <a href="#contact"        class="nav-link">Contact</a>
     </div>
-    <button class="resume-btn" type="button" onclick="window.open('https://drive.google.com/drive/folders/1LoNJ9KXsWqkBoqbdCIH-E6CGNy6S5OsL?usp=sharing', '_blank')">Download Resume</button>
+    <button class="resume-btn" type="button" onclick="window.open('https://drive.google.com/drive/folders/1LoNJ9KXsWqkBoqbdCIH-E6CGNy6S5OsL?usp=sharing', '_blank')"><span>Download Resume</span></button>
     <div class="hamburger" onclick="toggleMobileMenu()">
       <span></span><span></span><span></span>
     </div>
   </nav>
 
+  <!-- mobile nav -->
   <div class="mobile-nav">
-    <a href="#about" onclick="closeMobileMenu()">About</a>
-    <a href="#skills" onclick="closeMobileMenu()">Skills</a>
-    <a href="#projects" onclick="closeMobileMenu()">Projects</a>
-    <a href="#internships" onclick="closeMobileMenu()">Internships</a>
+    <a href="#about"          onclick="closeMobileMenu()">About</a>
+    <a href="#skills"         onclick="closeMobileMenu()">Skills</a>
+    <a href="#projects"       onclick="closeMobileMenu()">Projects</a>
+    <a href="#internships"    onclick="closeMobileMenu()">Internships</a>
     <a href="#certifications" onclick="closeMobileMenu()">Certifications</a>
-    <a href="#achievements" onclick="closeMobileMenu()">Achievements</a>
-    <a href="#education" onclick="closeMobileMenu()">Education</a>
-    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    <a href="#achievements"   onclick="closeMobileMenu()">Achievements</a>
+    <a href="#education"      onclick="closeMobileMenu()">Education</a>
+    <a href="#contact"        onclick="closeMobileMenu()">Contact</a>
   </div>
 
-  <!-- ================= HERO ================= -->
+  <!-- ═══ HERO ═══ -->
   <section class="hero-section">
     <div class="hero-content">
       <div class="hero-text">
         <div class="hero-pill"><span class="dot"></span>AVAILABLE FOR OPPORTUNITIES</div>
+
+        <span class="section-num">[ 001 ]</span>
         <h1 class="hero-greeting">Hi, I'm</h1>
-        <h1 class="hero-name"><span class="hero-name-highlight">Mohd Faiz</span></h1>
+        <h1 class="hero-name"><span class="hero-name-highlight glitch" data-text="Mohd Faiz">Mohd Faiz</span></h1>
         <p class="hero-title">Aspiring Cybersecurity Engineer<span class="caret"></span></p>
         <p class="hero-description">Learning cybersecurity, SOC operations, and reverse engineering &amp; malware analysis — one lab, one CVE, one packet capture at a time.</p>
         <div class="hero-buttons">
           <a href="#contact" class="hero-contact-btn">Contact Me</a>
-          <a href="https://ariz17vintage.vercel.app" target="_blank" rel="noopener" class="hero-portfolio-btn group">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="portfolio-icon">
-              <path d="M15 3h6v6"></path><path d="M10 14 21 3"></path>
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <a href="https://ariz17vintage.vercel.app" target="_blank" rel="noopener" class="hero-portfolio-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="portfolio-icon">
+              <path d="M15 3h6v6"/><path d="M10 14 21 3"/>
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
             </svg>
             Legacy Portfolio
           </a>
@@ -79,13 +93,16 @@
       <div class="hero-visual">
         <div class="hero-image-container">
           <div class="blob-ring"></div>
+          <div class="blob-ring-2"></div>
+          <div class="hero-corner hero-corner-tl"></div>
+          <div class="hero-corner hero-corner-br"></div>
           <div class="blob-background">
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
               <path fill="#00e6cc" d="M57.3,-44.9C73.1,-26,83.7,-2.2,77.6,15C71.5,32.2,48.7,42.9,25.8,54.1C3,65.3,-19.9,77,-38.2,71.3C-56.5,65.5,-70.2,42.3,-73.7,19.1C-77.3,-4.2,-70.6,-27.6,-56.6,-46.1C-42.6,-64.7,-21.3,-78.4,-0.2,-78.2C20.8,-78,41.6,-63.9,57.3,-44.9Z" transform="translate(100 100)" />
             </svg>
-            <video class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-[1.4] w-[55%] h-[55%] object-cover z-[2] mix-blend-multiply contrast-150 brightness-70 saturate-0"
-                   style="clip-path: ellipse(40% 35% at 50% 40%); position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1.4); width:55%; height:55%; object-fit:cover; z-index:2; mix-blend-mode:multiply; filter:contrast(1.5) brightness(0.7) saturate(0);"
-                   autoplay muted loop playsinline>
+            <video
+              style="clip-path: ellipse(40% 35% at 50% 40%); position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1.4); width:55%; height:55%; object-fit:cover; z-index:2; mix-blend-mode:multiply; filter:contrast(1.5) brightness(0.7) saturate(0);"
+              autoplay muted loop playsinline>
               <source src="Blob prf/Blob v.mp4" type="video/mp4">
             </video>
           </div>
@@ -99,13 +116,17 @@
     <div class="scroll-cue"><span>SCROLL</span><span class="line"></span></div>
   </section>
 
-  <!-- ================= ABOUT ================= -->
+  <!-- ═══ ABOUT ═══ -->
   <section id="about" class="section">
+    <span class="section-num">[ 002 ]</span>
     <div class="eyebrow">about</div>
-    <h2>Securing systems, one layer at a time</h2>
+    <h2 class="glitch" data-text="Securing systems, one layer at a time">Securing systems, one layer at a time</h2>
     <div class="about-content" data-reveal>
       <div class="profile-frame">
         <img src="Port Pic 1.webp" alt="Mohd Faiz">
+        <div class="profile-holo"></div>
+        <span class="profile-bracket tl"></span>
+        <span class="profile-bracket br"></span>
       </div>
       <div class="bio">
         <p class="bio-description">I'm a <strong>Computer Science Engineering</strong> student and aspiring cybersecurity professional passionate about securing systems, networks, and digital environments. Currently developing my skills in network security, ethical hacking, SOC operations, SIEM, Linux, and cybersecurity tools, while building a strong foundation in networking and system security.</p>
@@ -116,8 +137,9 @@
     </div>
   </section>
 
-  <!-- ================= SKILLS ================= -->
+  <!-- ═══ SKILLS ═══ -->
   <section id="skills" class="section">
+    <span class="section-num">[ 003 ]</span>
     <div class="eyebrow">tech-stack</div>
     <h2>Languages &amp; tools</h2>
     <p class="section-sub">The stack powering my journey through code and security.</p>
@@ -146,7 +168,7 @@
           <div class="skill-item cyber-domain-item">
             <div class="cyber-domain-logo">
               <svg viewBox="0 0 64 64" aria-hidden="true">
-                <circle cx="32" cy="32" r="24" fill="none" stroke="#ff4d4d" stroke-width="3"/>
+                <circle cx="32" cy="32" r="24" fill="none" stroke="#ff4455" stroke-width="3"/>
                 <path d="M20 24 L32 18 L44 24 V34 C44 41 38 48 32 51 C26 48 20 41 20 34 Z" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round"/>
                 <circle cx="32" cy="30" r="5" fill="none" stroke="#ffffff" stroke-width="2.2"/>
               </svg>
@@ -156,7 +178,7 @@
           <div class="skill-item cyber-domain-item">
             <div class="cyber-domain-logo">
               <svg viewBox="0 0 64 64" aria-hidden="true">
-                <circle cx="32" cy="32" r="24" fill="none" stroke="#ff4d4d" stroke-width="3"/>
+                <circle cx="32" cy="32" r="24" fill="none" stroke="#ff4455" stroke-width="3"/>
                 <path d="M20 22 H44 V42 H20 Z" fill="none" stroke="#ffffff" stroke-width="2.5"/>
                 <path d="M24 28 H40 M24 34 H34 M24 40 H36" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
                 <path d="M32 20 V14 M24 18 L20 14 M40 18 L44 14" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
@@ -167,7 +189,7 @@
           <div class="skill-item cyber-domain-item">
             <div class="cyber-domain-logo">
               <svg viewBox="0 0 64 64" aria-hidden="true">
-                <circle cx="32" cy="32" r="24" fill="none" stroke="#ff4d4d" stroke-width="3"/>
+                <circle cx="32" cy="32" r="24" fill="none" stroke="#ff4455" stroke-width="3"/>
                 <rect x="18" y="18" width="28" height="28" rx="4" fill="none" stroke="#ffffff" stroke-width="2.5"/>
                 <path d="M26 26 H38 M26 32 H38 M26 38 H34" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
                 <circle cx="40" cy="40" r="3" fill="none" stroke="#ffffff" stroke-width="2.2"/>
@@ -178,7 +200,7 @@
           <div class="skill-item cyber-domain-item">
             <div class="cyber-domain-logo">
               <svg viewBox="0 0 64 64" aria-hidden="true">
-                <circle cx="32" cy="32" r="24" fill="none" stroke="#ff4d4d" stroke-width="3"/>
+                <circle cx="32" cy="32" r="24" fill="none" stroke="#ff4455" stroke-width="3"/>
                 <path d="M22 42 C22 28 26 22 32 18 C38 22 42 28 42 42" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
                 <path d="M24 36 L28 32 L31 35 L40 26" fill="none" stroke="#ffffff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M18 46 L46 46" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
@@ -189,7 +211,7 @@
           <div class="skill-item cyber-domain-item">
             <div class="cyber-domain-logo">
               <svg viewBox="0 0 64 64" aria-hidden="true">
-                <circle cx="32" cy="32" r="24" fill="none" stroke="#ff4d4d" stroke-width="3"/>
+                <circle cx="32" cy="32" r="24" fill="none" stroke="#ff4455" stroke-width="3"/>
                 <path d="M18 42 L26 42 M18 42 L18 26 M26 42 L26 34 M28 22 L36 22 M36 22 L36 40 M36 40 L46 40" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M42 26 L46 22 L46 30" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -201,14 +223,16 @@
     </div>
   </section>
 
-  <!-- ================= PROJECTS ================= -->
+  <!-- ═══ PROJECTS ═══ -->
   <section id="projects" class="section">
+    <span class="section-num">[ 004 ]</span>
     <div class="eyebrow">projects</div>
     <h2>Things I've built</h2>
-    <p class="section-sub">Explore some of my featured projects, where I turn ideas into practical, real-world solutions.</p>
+    <p class="section-sub">Featured projects where I turn ideas into practical, real-world solutions.</p>
 
     <div class="bento-grid" data-reveal-stagger>
       <div class="glass-card project-card">
+        <span class="project-badge">HEALTHCARE · AI</span>
         <div class="project-image"><img src="Projects%20img/SHIFA image.png" alt="Shifa" onerror="this.style.display='none'"></div>
         <h3>Shifa</h3>
         <p class="project-desc">A smart healthcare platform that connects patients and doctors through appointments, teleconsultations, prescription management, and AI-powered healthcare assistance.</p>
@@ -216,6 +240,7 @@
       </div>
 
       <div class="glass-card project-card">
+        <span class="project-badge">SECURITY · MONITORING</span>
         <div class="project-image"><img src="Projects%20img/Sentinel image.png" alt="Sentinel" onerror="this.style.display='none'"></div>
         <h3>Sentinel</h3>
         <p class="project-desc">A cybersecurity monitoring platform designed to detect, analyze, and visualize security events in real time — a centralized dashboard for threat monitoring, log analysis, alert management, and incident investigation.</p>
@@ -223,6 +248,7 @@
       </div>
 
       <div class="glass-card project-card">
+        <span class="project-badge">RETRO · DESKTOP</span>
         <div class="project-image"><img src="Projects%20img/Old%20Portfolio.webp?v=4" alt="Vintage 2.0 — old portfolio project"></div>
         <h3>Vintage 2.0</h3>
         <p class="project-desc">A retro desktop experience with taskbar and embedded applications. Features games, a music player, and much more.</p>
@@ -230,6 +256,7 @@
       </div>
 
       <div class="glass-card project-card">
+        <span class="project-badge">AI · RAG · INDUSTRY</span>
         <div class="project-image"><img src="Projects%20img/Industrail brain.png" alt="Industrial brain AI"></div>
         <h3>Industrial Brain AI</h3>
         <p class="project-desc">Uses a Retrieval-Augmented Generation (RAG) engine to retrieve relevant information from industrial documents and provide context-aware AI responses — turning complex industrial data into actionable insights.</p>
@@ -238,8 +265,9 @@
     </div>
   </section>
 
-  <!-- ================= INTERNSHIPS ================= -->
+  <!-- ═══ INTERNSHIPS ═══ -->
   <section id="internships" class="section">
+    <span class="section-num">[ 005 ]</span>
     <div class="eyebrow">internships</div>
     <h2>Virtual internships</h2>
     <p class="section-sub">Hands-on exposure through virtual internship experiences.</p>
@@ -253,8 +281,9 @@
     </div>
   </section>
 
-  <!-- ================= ACHIEVEMENTS ================= -->
+  <!-- ═══ ACHIEVEMENTS ═══ -->
   <section id="achievements" class="section">
+    <span class="section-num">[ 006 ]</span>
     <div class="eyebrow">achievements</div>
     <h2>Milestones</h2>
     <p class="section-sub">Recognitions earned along the way.</p>
@@ -268,8 +297,9 @@
     </div>
   </section>
 
-  <!-- ================= CERTIFICATIONS ================= -->
+  <!-- ═══ CERTIFICATIONS ═══ -->
   <section id="certifications" class="section">
+    <span class="section-num">[ 007 ]</span>
     <div class="eyebrow">certifications</div>
     <h2>Credentials</h2>
     <p class="section-sub">Professional certifications backing up the skills above.</p>
@@ -343,8 +373,9 @@
     </div>
   </section>
 
-  <!-- ================= EDUCATION ================= -->
+  <!-- ═══ EDUCATION ═══ -->
   <section id="education" class="section">
+    <span class="section-num">[ 008 ]</span>
     <div class="eyebrow">education</div>
     <h2>Academic background</h2>
     <p class="section-sub">Educational milestones so far.</p>
@@ -380,8 +411,9 @@
     </div>
   </section>
 
-  <!-- ================= CONTACT ================= -->
+  <!-- ═══ CONTACT ═══ -->
   <section id="contact" class="section">
+    <span class="section-num">[ 009 ]</span>
     <div class="eyebrow">contact</div>
     <h2>Let's talk</h2>
     <p class="section-sub">Ready to bring ideas to life? Let's discuss what's next.</p>
@@ -425,6 +457,7 @@
     </div>
   </section>
 
+  <!-- ═══ FOOTER ═══ -->
   <footer class="website-footer">
     <div class="footer-content">
       <div>
@@ -454,7 +487,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>// copyright 2026 · all rights reserved · mf</p>
+      <p>// copyright 2026 · all rights reserved · mf &nbsp;·&nbsp; built for the 23rd century</p>
     </div>
   </footer>
 
